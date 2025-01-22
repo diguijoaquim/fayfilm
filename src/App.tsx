@@ -9,7 +9,7 @@ function App() {
       <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
       <iframe 
           className="w-full h-full object-cover"
-          src="https://www.youtube-nocookie.com/embed/coKW0ake9SM?autoplay=1&mute=1&loop=1&playlist=coKW0ake9SM&controls=0&modestbranding=1&rel=0"
+          src="https://www.youtube-nocookie.com/embed/coKW0ake9SM?autoplay=1&mute=0&loop=1&playlist=coKW0ake9SM&controls=0&modestbranding=1&rel=0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
