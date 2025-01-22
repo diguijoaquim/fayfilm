@@ -6,7 +6,7 @@ function App() {
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section with Video */}
       <div className="relative h-[70vh]">
-        <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
         <iframe 
           className="w-full h-full object-cover"
           src="https://www.youtube.com/embed/coKW0ake9SM?autoplay=1&mute=0&loop=1&playlist=coKW0ake9SM&controls=0"
@@ -52,7 +52,7 @@ function App() {
               <p className="text-gray-300 mb-6">
                 Ajude-nos a continuar produzindo cinema de qualidade em Moçambique. 
                 Sua contribuição faz a diferença!
-              </p>
+              </p> 
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg flex items-center justify-center gap-2">
                   <DollarSign size={20} />
@@ -79,6 +79,9 @@ function App() {
                 </li>
                 <li>
                   <strong className="text-red-500">Protagonista:</strong> ONDTWE
+                </li>
+                <li>
+                  <strong className="text-red-500">Site criado por:</strong> Ghost04
                 </li>
               </ul>
 
