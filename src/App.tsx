@@ -52,7 +52,7 @@ function App() {
               <p className="text-gray-300 mb-6">
                 Ajude-nos a continuar produzindo cinema de qualidade em Moçambique. 
                 Sua contribuição faz a diferença!
-              </p>
+              </p> 
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg flex items-center justify-center gap-2">
                   <DollarSign size={20} />
