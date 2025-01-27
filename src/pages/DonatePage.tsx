@@ -52,9 +52,11 @@ function DonatePage() {
                     Para doar via M-Pesa, envie sua contribuição para:
                   </p>
                   <div className="bg-blue-950/50 p-4 rounded-lg">
-                    <p className="text-2xl font-mono text-center">848446324</p>
+                    <p className="text-2xl font-mono text-center">843685160</p>
                   </div>
                 </div>
+                 
+
 
                 <div className="bg-green-900/30 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
@@ -65,7 +67,7 @@ function DonatePage() {
                     Para doar via E-mola, envie sua contribuição para:
                   </p>
                   <div className="bg-green-950/50 p-4 rounded-lg">
-                    <p className="text-2xl font-mono text-center">860716912</p>
+                    <p className="text-2xl font-mono text-center">870251917</p>
                   </div>
                 </div>
               </div>
