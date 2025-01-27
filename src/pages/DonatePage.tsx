@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Heart, DollarSign, ArrowLeft } from 'lucide-react';
+import { Heart, DollarSign, ArrowLeft, Copy, Check } from 'lucide-react';
 
 function DonatePage() {
   const navigate = useNavigate();
+  const [copiedMpesa, setCopiedMpesa] = useState(false);
+  const [copiedEmola, setCopiedEmola] = useState(false);
+
+  const handleCopy = async (text: string, type: 'mpesa' | 'emola') => {
+    try {
+      await navigator.clipboard.writeText(text);
+      if (type === 'mpesa') {
+        setCopiedMpesa(true);
+        setTimeout(() => setCopiedMpesa(false), 2000);
+      } else {
+        setCopiedEmola(true);
+        setTimeout(() => setCopiedEmola(false), 2000);
+      }
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-black text-white py-12">
@@ -51,12 +68,21 @@ function DonatePage() {
                   <p className="text-gray-300 mb-4">
                     Para doar via M-Pesa, envie sua contribuição para:
                   </p>
-                  <div className="bg-blue-950/50 p-4 rounded-lg">
+                  <div className="bg-blue-950/50 p-4 rounded-lg relative group">
                     <p className="text-2xl font-mono text-center">843685160</p>
+                    <button
+                      onClick={() => handleCopy('843685160', 'mpesa')}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                      title="Copiar número"
+                    >
+                      {copiedMpesa ? (
+                        <Check className="w-5 h-5 text-green-400" />
+                      ) : (
+                        <Copy className="w-5 h-5" />
+                      )}
+                    </button>
                   </div>
                 </div>
-                 
-
 
                 <div className="bg-green-900/30 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
@@ -66,8 +92,19 @@ function DonatePage() {
                   <p className="text-gray-300 mb-4">
                     Para doar via E-mola, envie sua contribuição para:
                   </p>
-                  <div className="bg-green-950/50 p-4 rounded-lg">
+                  <div className="bg-green-950/50 p-4 rounded-lg relative group">
                     <p className="text-2xl font-mono text-center">870251917</p>
+                    <button
+                      onClick={() => handleCopy('870251917', 'emola')}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                      title="Copiar número"
+                    >
+                      {copiedEmola ? (
+                        <Check className="w-5 h-5 text-green-400" />
+                      ) : (
+                        <Copy className="w-5 h-5" />
+                      )}
+                    </button>
                   </div>
                 </div>
               </div>
