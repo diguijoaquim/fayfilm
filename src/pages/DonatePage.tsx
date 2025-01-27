@@ -68,19 +68,26 @@ function DonatePage() {
                   <p className="text-gray-300 mb-4">
                     Para doar via M-Pesa, envie sua contribuição para:
                   </p>
-                  <div className="bg-blue-950/50 p-4 rounded-lg relative group">
-                    <p className="text-2xl font-mono text-center">843685160</p>
-                    <button
-                      onClick={() => handleCopy('843685160', 'mpesa')}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
-                      title="Copiar número"
-                    >
-                      {copiedMpesa ? (
-                        <Check className="w-5 h-5 text-green-400" />
-                      ) : (
-                        <Copy className="w-5 h-5" />
-                      )}
-                    </button>
+                  <div className="space-y-2">
+                    <div className="bg-blue-950/50 p-4 rounded-lg">
+                      <p className="text-lg text-gray-300 mb-2">Nome:</p>
+                      <p className="text-xl font-semibold">Francisco Agostinho</p>
+                    </div>
+                    <div className="bg-blue-950/50 p-4 rounded-lg relative group">
+                      <p className="text-lg text-gray-300 mb-2">Número:</p>
+                      <p className="text-2xl font-mono">843685160</p>
+                      <button
+                        onClick={() => handleCopy('843685160', 'mpesa')}
+                        className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                        title="Copiar número"
+                      >
+                        {copiedMpesa ? (
+                          <Check className="w-5 h-5 text-green-400" />
+                        ) : (
+                          <Copy className="w-5 h-5" />
+                        )}
+                      </button>
+                    </div>
                   </div>
                 </div>
 
@@ -92,19 +99,26 @@ function DonatePage() {
                   <p className="text-gray-300 mb-4">
                     Para doar via E-mola, envie sua contribuição para:
                   </p>
-                  <div className="bg-green-950/50 p-4 rounded-lg relative group">
-                    <p className="text-2xl font-mono text-center">870251917</p>
-                    <button
-                      onClick={() => handleCopy('870251917', 'emola')}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
-                      title="Copiar número"
-                    >
-                      {copiedEmola ? (
-                        <Check className="w-5 h-5 text-green-400" />
-                      ) : (
-                        <Copy className="w-5 h-5" />
-                      )}
-                    </button>
+                  <div className="space-y-2">
+                    <div className="bg-green-950/50 p-4 rounded-lg">
+                      <p className="text-lg text-gray-300 mb-2">Nome:</p>
+                      <p className="text-xl font-semibold">Francisco Agostinho</p>
+                    </div>
+                    <div className="bg-green-950/50 p-4 rounded-lg relative group">
+                      <p className="text-lg text-gray-300 mb-2">Número:</p>
+                      <p className="text-2xl font-mono">870251917</p>
+                      <button
+                        onClick={() => handleCopy('870251917', 'emola')}
+                        className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                        title="Copiar número"
+                      >
+                        {copiedEmola ? (
+                          <Check className="w-5 h-5 text-green-400" />
+                        ) : (
+                          <Copy className="w-5 h-5" />
+                        )}
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
